@@ -1,6 +1,6 @@
 #!/bin/bash
-# padre.sh - Lanza el proceso hijo
+# padre.sh - Launches child process
 
-echo "Script $$, lanzando launcher..."
+echo "Script with PID $$, initializing launcher..."
 ./gamesterminal.py &
 wait
