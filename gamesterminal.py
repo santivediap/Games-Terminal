@@ -5,6 +5,7 @@ from tkinter import *
 import getpass
 import subprocess
 import os
+from datetime import date
 
 # Create an instance of tkinter frame or window
 win=Tk()
@@ -103,6 +104,10 @@ def execute_command(event):
          return
    elif command == "clear":
       delete_prompt_result_info()
+      prompt.delete(0, END)
+      return
+   elif command == "date":
+      insert_prompt_result_info(f"Today's date: {date.today()}\n")
       prompt.delete(0, END)
       return
    elif command.find("theme") != -1:
